@@ -1,0 +1,20 @@
+{
+  "name": "mikao",
+  "version": "0.0.0",
+  "authors": [
+    "Kaique da Silva <kaique.developer@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "angular": "~1.3.0",
+    "angular-mocks": "~1.3.0"
+  }
+}
