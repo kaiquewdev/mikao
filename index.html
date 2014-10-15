@@ -9,6 +9,32 @@
 </head>
 <body>
   <div class="main-app">
+    <header class="main-header container">
+      <h1>Mikao</h1>
+      <hr>
+    </header>
+    <section class="main-section container" ng-controller='MainCtrl'>
+      <article class="main-search col-md-12">
+        <form role="form">
+          <div class="form-group input-group-lg pull-left col-md-10">
+            <input class="form-control" type="text" ng-model='keyword' placeholder='Qual o nome da doença, que você quer curar?'>
+          </div>
+          <button class='btn btn-default btn-lg pull-right col-md-2'>Procurar</button>
+        </form>
+      </article>
+
+      <section class="main-search-result col-md-12">
+        <ul class="main-search-result-wrapper">
+          <li ng-repeat='item in dict | filter:keyword'>
+            {{item.disease}}
+            <ul>
+              <li>{{item.cause}}</li>
+              <li>{{item.positiveAffirmation}}</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </section>
   </div>
 
   <script src="bower_components/angular/angular.min.js"></script>
