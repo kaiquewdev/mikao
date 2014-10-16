@@ -4,7 +4,7 @@ angular
     return function () {
       return $http({
         method: 'GET',
-        url: '/dict.json'
+        url: 'dict.json'
       });
     };
   })
