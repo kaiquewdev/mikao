@@ -1,10 +1,11 @@
 angular
   .module('mikao', [])
-  .factory('getDictList', function ($http) {
+  .value('dictURL', 'http://kaiquewdev.github.io/mikao/dict.json')
+  .factory('getDictList', function ($http, dictURL) {
     return function () {
       return $http({
         method: 'GET',
-        url: 'dict.json'
+        url: dictURL 
       });
     };
   })
